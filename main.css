@@ -82,7 +82,7 @@
       .print{
         margin-top: 30px;
         background-color: #aaddcc;
-        max-width: 250px;
+        max-width: 100%;
         height:30px;
         cursor: pointer;
       }
@@ -114,7 +114,7 @@
       .nav-line{
         position: absolute;
         border-left: 3px solid #aaddcc;
-        height: 17%;
+        height: 120px;
       }
 /*icon-link */
       .icon-link{
@@ -142,21 +142,31 @@
         background-size: cover;
         margin-right: 10px;
       }
+      .name-icon{
+        margin-top: 8px;
+      }
+      .name-icon i{
+        width: 25px;
+        height: 25px;
+      }
       #github-black{
-
         background: url(assets/github-black.png) center center no-repeat;
         background-size: cover;
-        margin-right: 10px;
+        margin-right: 5px;
+      }
+      #ig{
+        background: url(assets/ig.svg) center center no-repeat;
+        background-size: cover;
       }
       #me{
         max-width: 100%;
         margin-bottom: 20px;
       }
-
+      
       .name{
-        font-size: 40px;
-        font-weight: bolder;
-        line-height: 55px;
+        font-size: 30px;
+        font-weight: 600;
+        line-height: 35px;
         text-align: center;
         font-family: 'Noto Serif TC', serif;
       }
@@ -186,7 +196,7 @@
         
       }
       .title{
-        font-size: 60px;
+        font-size: 30px;
         font-weight: 900;
         font-family: 'Merriweather', serif;
         /*color: palevioletred;*/
@@ -326,6 +336,25 @@
       .project-discription{
         font-weight: 250;
       }
+  /*-------Sketch----------*/       
+      .sketch-wrapper{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      .sketch-item{
+        overflow: hidden;
+        width: 32%;
+        height: 280px;
+        margin:8px 0;
+      }
+      .sketch-item img{
+        display: block;
+        width: 100%;
+        object-fit: cover; 
+      }
 
   /*-------Skill Bar----------*/     
       .progress-bar {
@@ -344,7 +373,6 @@
 	    transition: width .6s ease;
 	}
 	.progress {
-	/*     height: 20px; */
 	    margin-bottom: 20px;
 	    overflow: hidden;
 	    background-color: lightgrey;
@@ -372,8 +400,8 @@
 	    }
 
 	.progress-item .progress-title {
-	    font-size     : 24px;
-	    font-weight   : 400;
+	    font-size     : 20px;
+	    font-weight   : 450;
 	    display       : inline-block;
 	    margin-bottom : 3px;
 	    margin-right: 10px;
@@ -402,11 +430,13 @@
 
 	.progress-item .progress-content {
 	    margin-bottom: 25px;
+      font-weight: 400;
 	    }
 	.progress-item .progress-percent {
 
 	    font-size        : 14px;
-	    background-color : #313131;
+	    background-color : #aaddcc;
+      color:#000000;
 	    position         : absolute;
 	    top              : 5px;
 	    padding          : 3px 8px 3px;
@@ -418,7 +448,7 @@
 	    position     : absolute;
 	    left         : 0;
 	    bottom       : -4px;
-	    border-top   : 6px solid #313131;
+	    border-top   : 6px solid #aaddcc;
 	    border-right : 8px solid transparent;
 	    }
 /*響應式設計-------------------------------*/
@@ -429,6 +459,9 @@
         }
         .icon-link span,a{
           font-size: 8px;
+        }
+        .sketch-item{
+          height: 220px;
         }
 
 
@@ -445,11 +478,12 @@
         .print>p{
           font-size: 15px;
         }
-        .nav-line{
-          height: 15%;
-        }
+        
       }
       @media (max-width: 949.98px){
+        *{
+          font-size: 13px;
+        }
         .sidebar{
           display: none;
         }
@@ -463,10 +497,36 @@
           width: 30px;
           height: 30px;
         }
+        .progress-item .progress-title{
+          font-size: 16px;
+        }
+        .bd{
+          font-size: 12px;
+        }
+        .progress-item .progress-percent{
+          font-size: 10px;
+        }
+        .project-title{
+          font-size: 16px;
+
+        }
+        .project-discription{
+          font-size: 13px;
+        }
+        .line{
+          display: none;
+        }
       }
 
-      @media (min-width: 992px) and (max-width: 1199.98px) {
-
+      @media (max-width: 750px){
+        .sketch-item{
+          height: 190px;
+        }
+      }
+      @media (max-width: 750px){
+        .sketch-item{
+          height: 150px;
+        }
       }
 
 
